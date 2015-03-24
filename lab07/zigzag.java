@@ -18,7 +18,7 @@ while ((nStars>=3)&&(nStars<=33)){
         while (myScanner.hasNextInt()){
         int counter=0;
         
-            while (counter < nStars){
+            while (counter <= nStars){
             System.out.print("*");
 	        counter++;
 	       
@@ -28,7 +28,7 @@ while ((nStars>=3)&&(nStars<=33)){
 //(3)
         int counter1=0;
         
-            while (counter1 < nStars){
+            while (counter1 <= nStars){
     	        System.out.print("*");
 	            counter1++;
 	            
@@ -43,7 +43,7 @@ while ((nStars>=3)&&(nStars<=33)){
     break;
     
 }//end outside loop
-while ((nStars<3)&&(nStars>33)){
+while ((nStars<=3)&&(nStars>=33)){
     System.out.print("Enter an int between 3 and 33: ");
     nStars=myScanner.nextInt();
     break;
