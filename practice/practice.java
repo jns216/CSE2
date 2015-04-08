@@ -1,28 +1,18 @@
-//import Scanner as we require it.
-import java.util.Scanner;
- 
-// the name of our class its public
-public class practice {
-    //void main
-        public static void main (String[] args)
-        {
-            //declare int
-            int i=1,no,fact=1;
- 
-            //Declare input as scanner
-            Scanner input = new Scanner(System.in);
- 
-            //Take input
-             System.out.println("Enter Number :");
-             no = input.nextInt();
- 
-            //while loops
-            while(i<=no)
-            {
-            fact=fact*i;
-            i++;
-            }
- 
-            System.out.println("Factorial = "+fact);
-        }
+public class practice{
+public static int perplex(int x,int y){
+	x+=3;
+	y+=x;
+	if(y>x+2){ return x; }
+	return x+y;
 }
+
+public static void main( String args[] ){
+	int x=-4,z=7;
+	int y=perplex(z,x);
+	System.out.println(y+" "+x);		//(a)
+	x=10;
+	y=perplex(x,x);
+	System.out.println(y+ " " + x);	//(b)
+     System.out.println( perplex(5, 1+perplex(6,7)));	//(c)
+} 
+   }
