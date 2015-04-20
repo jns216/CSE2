@@ -42,11 +42,13 @@ int input=myScanner.nextInt();
     if (input < 0){
     System.exit(0);
     }//exit the program if they do not enter an int >= 0.
-
+array2 = sort(array2);
+for (int k = 0; k < array2.length; k++){
+        System.out.print(array2[k] + " ");
+    }//end for loop
+    System.out.println();
 //Use binary search to search the array for the inputted value.
-
-
-
+binarySearch(array2, input);
   }//end main method
 
 //Method to print max value of array1
@@ -71,8 +73,47 @@ public static int getMinValue(int[] array){
             return minValue;  
 }//end min method  
 
+//method to sort array
+public static int [] sort (int[] array){
+int tempVar;
+    for (int i = 0; i < array.length; i++) {
+       for (int j = 0; j < array.length; j++) {
+            if (array[i] < array[j]) {
+                tempVar = array [j];
+                array [j]= array [i];
+                array [i] = tempVar;
+            }
+       }
+    }
+    return array;
+}
 //Method to search the array for the inputted value
-
+public static void binarySearch (int[] digit, int gradeSearch) {
+       int iteration = 1;
+       int top = digit.length;
+       int bottom = 0;
+       int mid = (top + bottom) / 2;
+    while ((digit[mid] != gradeSearch) && (bottom <= top)) {
+        iteration++;
+        if (digit[mid] > gradeSearch) {                                           
+            top = mid - 1;   
+        }                                                             
+        else {                                                        
+            bottom = mid + 1;
+        }
+        mid = (top + bottom) / 2;
+     }//end while loop
+    if (bottom <= top) {
+        System.out.print("The number " + gradeSearch + " was found ");
+        System.out.println("after " + iteration + " iterations.");
+     }//end if statement
+    else {
+          System.out.println("The number " + gradeSearch + " was not found.");
+          System.out.println("The number above the key was " + top);
+          System.out.println("The number below the key was " + bottom);
+    }//end else
+  return;
+}//end binary search method
 
 }//end class
 
