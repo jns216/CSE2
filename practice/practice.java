@@ -1,18 +1,18 @@
-public class practice{
-public static int perplex(int x,int y){
-	x+=3;
-	y+=x;
-	if(y>x+2){ return x; }
-	return x+y;
-}
 
-public static void main( String args[] ){
-	int x=-4,z=7;
-	int y=perplex(z,x);
-	System.out.println(y+" "+x);		//(a)
-	x=10;
-	y=perplex(x,x);
-	System.out.println(y+ " " + x);	//(b)
-     System.out.println( perplex(5, 1+perplex(6,7)));	//(c)
-} 
-   }
+public class practice {
+	public static void main (String[] args){
+	while (array[mid]!=key&&high<=low){
+		iteration++;
+		if (key<array[mid]){
+			high=mid-1;
+		}
+		if (key>array[mid]){
+			low=mid+1;
+		}
+		mid = (high+low)/2;
+	}
+	if (high>=low){
+		found;
+	}
+	}
+}
